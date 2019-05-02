@@ -12,7 +12,9 @@ describe('fizzbuzz', () => {
   });
   it('will return a string of fizz when given a multiple of 3 as an argument', () => {
     assert.strictEqual(fizzbuzz(3), 'fizz');
-  })
+    assert.strictEqual(fizzbuzz(6), 'fizz');
+  });
+
   // it('will return a string  when given any number as an argument', () => {
   //   const allChecksPass = jsc.checkForall(jsc.integer, (number) => fizzbuzz(number) === `${number}`);
   //   assert.strictEqual(allChecksPass, true);
