@@ -24,6 +24,9 @@ describe('fizzbuzz', () => {
   it('will return a string of fizzbuzz when given a multiple of 3 and 5 as an argument', () => {
     assert.strictEqual(fizzbuzz(15), 'fizzbuzz');
   });
+  it('will throw an error when given a non-integer as an argument', () => {
+    assert.strictEqual(fizzbuzz('dog'), 'Error');
+  });
   it('will return either the input as a string or fizz if a multiple of 3 or buzz if a multiple of 5', () => {
     const allChecksPass = jsc.checkForall(jsc.integer, (number) => {
       if (number === 0) {

@@ -11,6 +11,9 @@ function fizzbuzz(number) {
   if (number % 5 === 0) {
     return 'buzz';
   }
+  if (typeof number !== 'number') {
+    throw new Error('This is not a number');
+  }
   return `${ number }`
 }
 
