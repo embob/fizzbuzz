@@ -26,6 +26,9 @@ describe('fizzbuzz', () => {
   });
   it('will return either the input as a string or fizz if a multiple of 3 or buzz if a multiple of 5', () => {
     const allChecksPass = jsc.checkForall(jsc.integer, (number) => {
+      if (number === 0) {
+        return fizzbuzz(number) === '0';
+      }
       if ((number % 3 === 0) && (number % 5 === 0)) {
         return fizzbuzz(number) === 'fizzbuzz';
       }
